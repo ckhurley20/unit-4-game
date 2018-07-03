@@ -5,3 +5,18 @@
     margin-left: auto;
     text-align: center;
   }
+
+.gempics {
+    width: 100px;
+    height: 100px;
+  }
+
+.number-generator {
+    height: 200px;
+
+  }
+
+.win-loss {
+    height: 200px;
+
+  }
