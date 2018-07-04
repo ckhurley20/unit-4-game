@@ -5,18 +5,43 @@
     margin-left: auto;
     text-align: center;
   }
+.instructions {
+    padding-right: auto;
+    padding-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    border: 1px solid;
+    border-color: black;
+    margin-bottom: 10px;
+}
 
 .gempics {
     width: 100px;
     height: 100px;
+    cursor: pointer;
   }
 
-.number-generator {
-    height: 200px;
+.number-generator,
+.score-generator {
+    height: 150px;
+    border: 1px solid;
+    border-color: black;
+    width: 24%;
+    margin-bottom: 10px;
 
   }
 
 .win-loss {
-    height: 200px;
-
+    height: 150px;
+    border: 1px solid;
+    border-color: black;
+    width:24%;
+    margin-bottom: 10px;
   }
+
+.number-generator p,
+.score-generator p, 
+.win-loss p { 
+    font-size: 54px;
+}

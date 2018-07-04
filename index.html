@@ -26,32 +26,71 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-">
+            <div class="col- instructions">
                 <p>
-                    Instructions....
+                    <h4>INSTRUCTIONS:</h4>
+                    ~ At the start of a game a random number will be generated in the "Random Number Box."
+                    <br>
+                    ~ Each one of the four gems at the bottom are worth a different number between 1-12. When a gem is clicked that amount will be added to the "Current Score Box." 
+                    <br>
+                    ~ The objective of the game is to match your score with the random generated number, if matched you win.
+                    <br>
+                    ~ If your score goes over the random number you will lose the game.
+                    <br>
+                    ~ When a new game begins there will be a new random number given and the four gems will have new values assigned to them.
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col- number-generator">
-                RANDOM NUMBER GENERATED
+                RANDOM NUMBER:
+                <br>
+                <p id="randomNumber">
+                    0
+                </p>
+            </div>
+            <div class="col- score-generator">
+                CURRENT SCORE:
+                <br>
+                <p id="currentScore">
+                    0
+                </p>
             </div>
             <div class="col- win-loss">
-                WINS & LOSSES COLUMN
+                WINS:
+                <br>
+                <p id="wins">
+                    0
+                </p>
+            </div>
+            <div class="col- win-loss">
+                LOSSES:
+                <br>
+                <p id="losses">
+                    0
+                </p>
             </div>
         </div>
         <div class="row">
             <div class="col-">
-                <img src="assets/images/blue-gem.jpg"  class= "gempics">
+                <button type="button" id="blueGem">
+                        <img src="assets/images/blue-gem.jpg"  class= "gempics">
+                </button>
             </div>
             <div class="col-">
-                <img src="assets/images/red-gem.jpg"  class= "gempics">
+                <button type="button" id="redGem">
+                    <img src="assets/images/red-gem.jpg"  class= "gempics">
+                </button>
             </div>
             <div class="col-">
-                <img src="assets/images/green-gem.jpg"  class= "gempics">
+                <button type="button" id="greenGem">
+                    <img src="assets/images/green-gem.jpg"  class= "gempics">
+                </button>
             </div>
             <div class="col-">
-                <img src="assets/images/purple-gem.jpg"  class= "gempics">
+                <button type="button" id="purpleGem">
+                    <img src="assets/images/purple-gem.jpg"  class= "gempics">
+                </button>
             </div>
         </div>
     </div>
