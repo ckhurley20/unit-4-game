@@ -1,42 +1,100 @@
-var $redGem = document.getElementById("redGem");
-var $greenGem = document.getElementById("greenGem");
-var $blueGem = document.getElementById("blueGem");
-var $purpleGem = document. getElementById("purpleGem");
-var $wins = document. getElementById("wins");
-var $losses = document. getElementById("losses");
-var $currentScore = document. getElementById("currentScore");
-var $randomNumber = document. getElementById("randomNumber");
+$( document ).ready(function(){
+    // Generates random number to guess
+    var Random=Math.floor(Math.random()*102+19)
+    
+    // Display random number
+    $('#randomNumber').text(Random);
+    
+    //Generate random number for each crystal
+    var num1= Math.floor(Math.random()*12+1)
+    var num2= Math.floor(Math.random()*12+1)
+    var num3= Math.floor(Math.random()*12+1)
+    var num4= Math.floor(Math.random()*12+1)
+    
+    // Variables to keep track of wins, losses and total
+    var currentScore= 0; 
+    var wins= 0;
+    var losses = 0;
+    
+  
+  $('#wins').text(wins);
+  $('#losses').text(losses);
+  
+  // Reset game
+  function reset(){
+        Random=Math.floor(Math.random()*102+19);
+        console.log(Random)
+        $('#randomNumber').text(Random);
+        num1= Math.floor(Math.random()*12+1);
+        num2= Math.floor(Math.random()*12+1);
+        num3= Math.floor(Math.random()*12+1);
+        num4= Math.floor(Math.random()*12+1);
+        currentScore= 0;
+        $('#currentScore').text(currentScore);
+        } 
 
-var wins = 0;
-var losses = 0;
-var randomNumber = "";
-var currentScore = "",
+
+  // Display wins
+  function winner(){
+  alert("Congrats! You won!");
+    wins++; 
+    $('#wins').text(wins);
+    reset();
+  }
+  // Display losses
+  function loser(){
+  alert ("Sorry! You lose!");
+    losses++;
+    $('#losses').text(losses);
+    reset()
+  }
+  // Clicking crystals
+    $('#redGem').on ('click', function(){
+      currentScore = currentScore + num1;
+      $('#currentScore').text(currentScore); 
+            //Win & lose conditions
+          if (currentScore == Random){
+            winner();
+          }
+          else if ( currentScore > Random){
+            loser();
+          }   
+    })  
+    $('#blueGem').on ('click', function(){
+      currentScore = currentScore + num2;
+      $('#currentScore').text(currentScore); 
+          if (currentScore == Random){
+            winner();
+          }
+          else if ( currentScore > Random){
+            loser();
+          } 
+    })  
+    $('#greenGem').on ('click', function(){
+      currentScore = currentScore + num3;
+      $('#currentScore').text(currentScore);
+  
+            if (currentScore == Random){
+            winner();
+          }
+          else if ( currentScore > Random){
+            loser();
+          } 
+    })  
+    $('#purpleGem').on ('click', function(){
+      currentScore = currentScore + num4;
+      $('#currentScore').text(currentScore); 
+        
+            if (currentScore == Random){
+            winner();
+          }
+          else if ( currentScore > Random){
+            loser();
+          }
+    });   
+  }); 
+
+  
 
 
-// GENERATE RANDOM NUMBER BETWEEN 19-120
 
-randomNumber = Math.floor(Math.random() * 121) + 19;
-
-$randomNumber.textContent = randomNumber;
-
-
-
-// CHECK FOR LOSS
-function checkLoss(){
-    if (currentScore > randomNumber) {
-        losses++;
-        $losses.textContent = losses;
-    }
-    checkWin();
-}
-
-
-
-//  CHECK FOR WIN
-function checkWin() {
-    if(currentScore = randomNumber) {
-        wins++;
-        $wins.textContent = wins;
-       
-    }
-}
