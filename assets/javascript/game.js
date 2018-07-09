@@ -1,5 +1,5 @@
 $( document ).ready(function(){
-    // Generates random number to guess
+    // Generates random number 
     var Random=Math.floor(Math.random()*102+19)
     
     // Display random number
